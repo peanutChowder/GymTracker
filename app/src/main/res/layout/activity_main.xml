@@ -1,27 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ScrollView
-        android:id="@+id/scrollView2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="1dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <RelativeLayout
+        android:id="@+id/relLayoutHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical" />
-    </ScrollView>
-</androidx.constraintlayout.widget.ConstraintLayout>
+            android:text="Placeholder Text" />
+
+    </RelativeLayout>
+
+
+
+
+    <EditText
+        android:layout_below="@+id/relLayoutHeader"
+        android:id="@+id/editTextExercise1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="some text here"
+
+        />
+
+    <EditText
+        android:id="@+id/editTextExercise2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="some text here"
+        android:layout_below="@id/editTextExercise1"
+        />
+
+    <EditText
+        android:id="@+id/editTextExercise3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="some text here"
+        android:layout_below="@id/editTextExercise2"
+        />
+
+    <EditText
+        android:id="@+id/editTextExercise4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="some text here"
+        android:layout_below="@+id/editTextExercise3"
+        />
+
+    <EditText
+        android:id="@+id/editTextExercise5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="some text here"
+        android:layout_below="@id/editTextExercise4"
+        />
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:layout_below="@id/editTextExercise5"/>
+
+    <Button
+        android:id="@+id/buttonLoad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="load"
+        android:layout_below="@id/buttonSave"/>
+
+    <Button
+        android:id="@+id/buttonAddExercise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Exercise"
+        android:layout_below="@id/buttonLoad"/>
+
+
+</RelativeLayout>
